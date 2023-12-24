@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ashok Calculator</title>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="header">
+      <h1>Ashok Calculator</h1>
+      <div class="options">
+        <a href="#" class="history-link" onclick="toggleHistory()">History</a>
+        <a href="#" class="instructions-link" onclick="toggleInstructions()">Instructions</a>
+      </div>
+    </div>
+    <div id="history" class="history-container">
+      <h2>History</h2>
+      <button class="btn delete-btn" onclick="clearHistory()">Delete History</button>
+      <ul id="historyList"></ul>
+    </div>
+    <div id="userInput" class="user-input"></div>
+    <div class="display" id="display">0</div>
+    <div class="button-row">
+      <button class="btn" onclick="clearDisplay()">C</button>
+      <button class="btn" onclick="appendNumber('7')">7</button>
+      <button class="btn" onclick="appendNumber('8')">8</button>
+      <button class="btn" onclick="appendNumber('9')">9</button>
+      <button class="btn" onclick="setOperator('/')">/</button>
+    </div>
+    <div class="button-row">
+      <button class="btn" onclick="appendNumber('4')">4</button>
+      <button class="btn" onclick="appendNumber('5')">5</button>
+      <button class="btn" onclick="appendNumber('6')">6</button>
+      <button class="btn" onclick="setOperator('*')">*</button>
+    </div>
+    <div class="button-row">
+      <button class="btn" onclick="appendNumber('1')">1</button>
+      <button class="btn" onclick="appendNumber('2')">2</button>
+      <button class="btn" onclick="appendNumber('3')">3</button>
+      <button class="btn" onclick="setOperator('-')">-</button>
+    </div>
+    <div class="button-row">
+      <button class="btn" onclick="appendNumber('0')">0</button>
+      <button class="btn equal" onclick="calculateResult()">=</button>
+      <button class="btn" onclick="setOperator('+')">+</button>
+    </div>
+    <div class="button-row">
+      <button class="btn" onclick="calculateLog()">log</button>
+      <button class="btn" onclick="calculateTrig('sin')">sin</button>
+      <button class="btn" onclick="calculateTrig('cos')">cos</button>
+      <button class="btn" onclick="calculateTrig('tan')">tan</button>
+    </div>
+    <div id="instructions" class="instructions-container">
+      <h2>Instructions</h2>
+      <p>1. Use the number buttons to input values.</p>
+      <p>2. Click on operators (+, -, *, /) to perform calculations.</p>
+      <p>3. Press "C" to clear the display.</p>
+      <p>4. Check the "History" link for past calculations.</p>
+      <p>5. Explore additional functions like log, sin, cos, tan.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
